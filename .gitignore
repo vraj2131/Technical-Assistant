@@ -1,0 +1,58 @@
+# --- Python basics ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.cache/
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints
+.coverage
+htmlcov/
+.pyre/
+.pytype/
+
+# --- Virtual envs & env files ---
+.venv/
+venv/
+.env
+.env.*
+!.env.example      # keep the example template
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Streamlit ---
+.streamlit/secrets.toml    # secrets live in Streamlit Cloud, not repo
+# keep UI theme/config:
+!/.streamlit/config.toml
+
+# --- Data & indexes (large, regenerated) ---
+data/
+!data/README.md
+!data/.gitkeep
+!data/metadata.jsonl       # keep small metadata if useful
+
+indexes/
+qdrant_storage/            # local Qdrant volume (if you run docker -v)
+
+# --- Model caches (optional; uncomment if present) ---
+# models/
+# hf_cache/
+# .huggingface/
+# .cache/huggingface/
+
+# --- IDE/OS clutter ---
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+*.swp
+config.toml
